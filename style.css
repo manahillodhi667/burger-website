@@ -1,0 +1,333 @@
+/* ================= GLOBAL STYLES ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #f9f9f9;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Slide Shell */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+/* ================= THEME 1: WHITE SLIDE ================= */
+.slide-white {
+    background-color: #ffffff;
+    padding: 20px 8%;
+}
+
+.slide-white .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.slide-white .logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.slide-white .green-text { color: #27ae60; }
+.slide-white .yellow-text { color: #f1c40f; }
+
+.slide-white .nav-links a {
+    text-decoration: none;
+    color: #666;
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.slide-white .nav-links a:hover, 
+.slide-white .nav-links a.active-link {
+    color: #27ae60;
+}
+
+.slide-white .nav-links a.active-link {
+    background-color: #27ae60;
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 5px;
+}
+
+.slide-white .nav-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.slide-white .icon-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #f1f2f6;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f1c40f;
+    cursor: pointer;
+}
+
+.slide-white .icon-circle:hover {
+    background-color: #f1c40f;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Hero Content layout */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-top: 40px;
+    flex: 1;
+    gap: 30px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 550px;
+}
+
+.slide-white .sub-title {
+    color: #27ae60;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.slide-white .main-title {
+    color: #f1c40f;
+    font-size: 65px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.slide-white .desc {
+    color: #777;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.btn-yellow {
+    background-color: #f1c40f;
+    color: white;
+}
+
+.btn-yellow:hover {
+    background-color: #dbb00d;
+    box-shadow: 0 5px 15px rgba(241, 196, 15, 0.4);
+    transform: translateY(-2px);
+}
+
+.hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ================= THEME 2: BLACK SLIDE ================= */
+.slide-black {
+    background-color: #000000;
+    padding: 20px 8%;
+}
+
+.navbar-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #222;
+}
+
+.logo-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.logo-icon {
+    font-size: 35px;
+    color: #e74c3c;
+    margin-bottom: 5px;
+}
+
+.logo-center h2 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-links-center a {
+    text-decoration: none;
+    color: #bbb;
+    margin: 0 20px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nav-links-center a:hover {
+    color: #e74c3c;
+}
+
+.slide-black .main-title-white {
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.slide-black .desc-white {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.btn-red {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-red:hover {
+    background-color: #c0392b;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Crop/alignment adjustment for second image layout if needed */
+.reverse-layout {
+    margin-top: 20px;
+}
+
+
+/* ================= DOTS NAVIGATION STYLING ================= */
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #bdc3c7;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* active dot color matching slide indicator */
+.dot.active {
+    background-color: #27ae60; 
+    width: 16px;
+    border-radius: 10px;
+}
+
+
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+@media (max-width: 991px) {
+    .slide-white .main-title { font-size: 48px; }
+    .slide-black .main-title-white { font-size: 38px; }
+    .hero-content { gap: 15px; }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 40px;
+        justify-content: center;
+    }
+    
+    .hero-text {
+        order: 2; /* Text ko image ke neeche lane k liye */
+    }
+    
+    .hero-img {
+        order: 1;
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+    
+    /* Hide some links or switch behavior on mobile if necessary */
+    .nav-links, .nav-icons {
+        display: none; /* Mobile view me icons/links simple karne ke liye */
+    }
+    
+    .slide-white .navbar {
+        justify-content: center;
+    }
+
+    .nav-links-center {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .nav-links-center a {
+        margin: 5px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide-white .main-title { font-size: 36px; }
+    .slide-black .main-title-white { font-size: 28px; }
+    .hero-img { max-width: 100%; }
+    .btn { width: 100%; text-align: center; }
+}

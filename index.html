@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Foodie Slider</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="slider-container">
+
+            <div class="slide active slide-white">
+                <header class="navbar">
+                    <div class="logo">
+                        <span class="green-text"><i
+                                class="fas fa-utensils"></i>Food With
+                            Manahil</span><span class="yellow-text">.</span>
+                    </div>
+                    <nav class="nav-links">
+                        <a href="#" class="active-link">Home</a>
+                        <a href="#">Dishes</a>
+                        <a href="#">About</a>
+                        <a href="#">Menu</a>
+                        <a href="#">Testimonials</a>
+                        <a href="#">Order</a>
+                    </nav>
+                    <div class="nav-icons">
+                        <div class="icon-circle"><i
+                                class="fas fa-search"></i></div>
+                        <div class="icon-circle"><i
+                                class="fas fa-heart"></i></div>
+                        <div class="icon-circle"><i
+                                class="fas fa-shopping-cart"></i></div>
+                    </div>
+                </header>
+
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h4 class="sub-title">Our Special Dish</h4>
+                        <h1 class="main-title">Mayun Burger</h1>
+                        <p class="desc">Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit. Architecto cupiditate facere
+                            delectus sequi esse quibusdam?</p>
+                        <a href="#" class="btn btn-yellow">Order Now</a>
+                    </div>
+                    <div class="hero-img">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6a2SRBZxRF1jFwFXZCBReb6ONpg5YkDKJPaQ3-oMp3w&s=10"
+                            alt="Cheese Burger">
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide slide-black">
+                <header class="navbar-center">
+                    <div class="logo-center">
+                        <i class="fas fa-hamburger logo-icon"></i>
+                        <h2>HM Burger</h2>
+                    </div>
+                    <nav class="nav-links-center">
+                        <a href="#">HOME</a>
+                        <a href="#">ABOUT</a>
+                        <a href="#">MENU</a>
+                        <a href="#">GALLERY</a>
+                        <a href="#">REVIEWS</a>
+                        <a href="#">CONTACT US</a>
+                    </nav>
+                </header>
+
+                <div class="hero-content reverse-layout">
+                    <div class="hero-text">
+                        <h1 class="main-title-white">Best Burgers in town</h1>
+                        <p class="desc-white">Lorem ipsum dolor, sit amet
+                            consectetur adipisicing elit. Obcaecati eveniet
+                            harum suscipit sint ducimus cum modi dolorem id
+                            praesentium quam porro tenetur et aspernatur a
+                            aperiam magnam, ex architecto numquam.</p>
+                        <a href="#" class="btn btn-red">check out menu</a>
+                    </div>
+                    <div class="hero-img">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmaIYjt436O1S1NNRqE5dcussIMjJyw83__rAMSIrWwRVM0OdIpXaAp7Q&s=10"
+                            alt="HM Burger">
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+            </div>
+
+        </div>
+
+        <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function currentSlide(index) {
+            // Remove active class from all slides and dots
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Add active class to selected slide and dot
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlideIndex = index;
+        }
+    </script>
+    </body>
+</html>
